@@ -1,0 +1,15 @@
+{
+  "name": "gundam-database",
+  "version": "1.0.0",
+  "description": "Seeding Database with Gundam Specs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew K Lewis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11"
+  }
+}
