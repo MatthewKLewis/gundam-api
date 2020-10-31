@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 mongoose.Promise = Promise;
 
-const mongoURI = "mongodb://localhost/gundam";
+const mongoURI = "wouldn't you like to know";
 
 mongoose
   .connect(mongoURI, { 

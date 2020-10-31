@@ -1,4 +1,4 @@
-const gundamRawData = require("./gundamData.json");
+const gundamRawData = require("./gundamData2.json");
 const gundamModel = require("./model/gundam.model");
 
 gundamModel.findByIdAndDelete().then(() => {

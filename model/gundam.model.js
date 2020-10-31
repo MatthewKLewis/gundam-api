@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 
 const gundamSchema = new Schema(
     {
+        "Final Array Index": Number,
         "Image": {
           type: String, 
           required: true, 
