@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 mongoose.Promise = Promise;
 
-const mongoURI = "wouldn't you like to know";
+const mongoURI = "mongodb://localhost/gundam";
 
 mongoose
   .connect(mongoURI, { 
@@ -10,7 +10,7 @@ mongoose
     useUnifiedTopology: true
   })
   .then(instance =>
-    console.log(`Connected to db: ${instance.connections[0].name}`)
+    console.log(`Connected to db`)
   )
   .catch(err => console.log("Connection Failed.", err));
 
