@@ -3,7 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <style>
+      body {
+        background-color: #444;
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+      }
+
+      .container {
+        color: #fff;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+
+      h1 {
+        background-color: #222;
+        color: #fff;
+        width: 100%;
+        padding-left: 100px;
+        margin: 0;
+      }
+    </style>
     <title>API Routes</title>
   </head>
   <body>
@@ -23,10 +44,11 @@
         <li>Receive a Random Gundam: GET at '/random'</li>
         <li>Receive a Specific Gundam: GET at '/gundam/:id'</li>
         <li>Delete a Gundam: DELETE at '/gundam/:id'</li>
-        <li>Modifiy a Specific Gundam's technical information: PUT at '/gundam/:id'</li>
-
+        <li>
+          Modifiy a Specific Gundam's technical information: PUT at
+          '/gundam/:id'
+        </li>
       </ul>
-
     </div>
     <script src="./script.js"></script>
   </body>
