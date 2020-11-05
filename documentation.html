@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>API Routes</title>
+  </head>
+  <body>
+    <h1>Gundam API</h1>
+    <div class="container">
+      <p>
+        Gundam API contains information and picture links for every mobile suit
+        listed in the Fandom Wiki:
+        https://gundam.fandom.com/wiki/The_Gundam_Wiki
+      </p>
+      <p>
+        A JSON object for every mech is accessible through our HTTP web API.
+        Consult the documentation below and start fetching data!
+      </p>
+
+      <ul>
+        <li>Receive a Random Gundam: GET at '/random'</li>
+        <li>Receive a Specific Gundam: GET at '/gundam/:id'</li>
+        <li>Delete a Gundam: DELETE at '/gundam/:id'</li>
+        <li>Modifiy a Specific Gundam's technical information: PUT at '/gundam/:id'</li>
+
+      </ul>
+
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
