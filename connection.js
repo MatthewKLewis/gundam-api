@@ -2,7 +2,14 @@ const mongoose = require("mongoose");
 
 mongoose.Promise = Promise;
 
-const mongoURI = "mongodb://localhost/gundam";
+//Needs to be changed on deployment
+let mongoURI = "";
+
+if (process.env.NODE_ENV === "production") {
+  mongoURI = process.env.DB_URL;
+} else {
+  mongoURI = "mongodb://localhost/gundam";
+}
 
 mongoose
   .connect(mongoURI, { 

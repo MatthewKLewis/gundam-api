@@ -15,40 +15,102 @@
         color: #fff;
         padding-left: 100px;
         padding-right: 100px;
+
+        display: grid;
+        grid-template-columns: auto auto;
       }
 
       h1 {
         background-color: #222;
         color: #fff;
-        width: 100%;
+        padding: 20px;
         padding-left: 100px;
         margin: 0;
       }
+
+      .info {
+        grid-column: 1 / 3;
+        padding-left: 10px;
+        font-size: 18px;
+        line-height: 30px;
+      }
+
+      a {color: orange}
+
+      ul {padding: 0; margin: 0; margin-left: 5px; margin-right: 5px;}
+
+      li {
+        list-style: none;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #777;
+        border: 2px solid black;
+        font-size: 24px;
+        line-height: 50px;
+      }
+
+      .sample {
+        margin-top: 10px;
+        margin-left: 5px; 
+        margin-right: 5px;
+        padding: 10px;
+        background-color: #fff;
+        border: 2px solid black;
+        color: #333;
+        font-size: 10px;
+        line-height: 30px;
+      }
+
+      .method {
+        font-weight: bold;
+        background-color: purple;
+        padding: 4px;
+        border-radius: 5px;
+      }
     </style>
-    <title>API Routes</title>
+    <title>Gundam API</title>
   </head>
   <body>
     <h1>Gundam API</h1>
     <div class="container">
-      <p>
-        Gundam API contains information and picture links for every mobile suit
-        listed in the Fandom Wiki:
-        https://gundam.fandom.com/wiki/The_Gundam_Wiki
+      <p class="info">
+        Gundam API contains information and picture links for every mobile suit listed in the Fandom Wiki:<br>
+        <a href='https://gundam.fandom.com/wiki/The_Gundam_Wiki'>https://gundam.fandom.com/wiki/The_Gundam_Wiki</a><br>
+        A JSON object for every mech is accessible through our HTTP web API.<br>
+        Consult the documentation below and start fetching data!<br>
       </p>
-      <p>
-        A JSON object for every mech is accessible through our HTTP web API.
-        Consult the documentation below and start fetching data!
-      </p>
-
       <ul>
-        <li>Receive a Random Gundam: GET at '/random'</li>
-        <li>Receive a Specific Gundam: GET at '/gundam/:id'</li>
-        <li>Delete a Gundam: DELETE at '/gundam/:id'</li>
-        <li>
-          Modifiy a Specific Gundam's technical information: PUT at
-          '/gundam/:id'
-        </li>
+        <li>Receive a Random Gundam:<br> <span class="method">GET</span> at '/random'</li>
+        <li>Receive a Specific Gundam:<br> <span class="method">GET</span> at '/gundam/:id'</li>
+        <li>Create a Gundam:<br> <span class="method">POST</span> at '/create'</li>
+        <li>Delete a Gundam:<br> <span class="method">DELETE</span> at '/delete/:id'</li>
+        <li>Modifiy a Gundam:<br> <span class="method">PUT</span> at '/update/:id'</li>
       </ul>
+      <div class="sample">
+        <b>SAMPLE:</b><br>
+        {"Image": "https://vignette.wikia.nocookie.net/gundam/images/5/5a/Ms-06fz.jpg/revision/latest/scale-to-width-down/310?cb=20201005143847",<br>
+        "Classification": "Limited Production General-Purpose Mobile Suit",<br>
+        "Model Number": "MS-06FZ",<br>
+        "Official Name": "Zaku II Kai\u30b6\u30afII\u6539",<br>
+        "Head Height": "17.5 m57.415\u00a0ft 688.976\u00a0in ",<br>
+        "Base Weight": "56.2 t",<br>
+        "Full Weight": "74.5 t",<br>
+        "Power Source": "Minovsky Ultracompact Fusion Reactor",<br>
+        "Generator Output": "976 kW1,308.837\u00a0hp ",<br>
+        "Armor Material": "Titanium Alloy Ceramic Composite",<br>
+        "Thruster Layout": "3 x 24500 kg54,013.239\u00a0lb 27.007\u00a0tons  (back)2 x 3000 kg6,613.866\u00a0lb 3.307\u00a0tons  (back leg)",<br>
+        "Attitude Control Verniers": "14",<br>
+        "Maximum Acceleration": "1.07 G",<br>
+        "Maximum Speed": "103 km/h64.001\u00a0mph  (Ground)",<br>
+        "Crew": "Pilot only (in cockpit in torso)",<br>
+        "Manufacturer": "Zeonic ",<br>
+        "First Deployment": "0079 U.C.",<br>
+        "Operator": "Principality of ZeonCyclops TeamZeon RemnantsFree ZeonCoalition of Volunteers",<br>
+        "Known Pilots": "Bernard WisemanLiberio LinckeSteiner Hardy",<br>
+        "Fixed": "Shoulder Shield3 x Hand Grenade",<br>
+        "TV Series": "GBD",<br>
+        "Mechanical Designer": "Yutaka Izubuchi"}
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>

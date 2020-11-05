@@ -2,13 +2,16 @@
 // I was able to get https://gundamapi.herokuapp.com/
 //
 
+//Importing...
 const express = require("express");
 const path = require('path');
+const dotenv = require('dotenv')
+
+//Configuring...
 const Gundam = require("./model/gundam.model");
 const app = express();
 app.use(express.json());
 
-const port = 4000;
 app.set("json spaces", 2);
 
 //GET ROOT thanks: https://www.digitalocean.com/community/tutorials/use-expressjs-to-deliver-html-files
@@ -75,6 +78,8 @@ app.delete("/delete/:id", (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Listening on Port: ${port}`);
+app.set('port', process.env.PORT || 4000)
+
+app.listen(app.get('port'), () => {
+  console.log(`Listening on Port: ${app.get('port')}`);
 });
