@@ -14,8 +14,12 @@ app.use(express.json());
 
 app.set("json spaces", 2);
 
-//GET ROOT thanks: https://www.digitalocean.com/community/tutorials/use-expressjs-to-deliver-html-files
-app.get("/home", (req, res) => {
+// app.get('/', (req, res) => {
+//   res.redirect('')
+// })
+
+//GET DOCUMENTS thanks: https://www.digitalocean.com/community/tutorials/use-expressjs-to-deliver-html-files
+app.get("/documentation", (req, res) => {
   res.sendFile(path.join(__dirname + '/documentation.html'), (err)=> {
     if (err) console.log(err);
   });
