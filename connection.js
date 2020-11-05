@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 mongoose.Promise = Promise;
 
 //Needs to be changed on deployment
-let mongoURI = "";
+let mongoURI = process.env.DB_URL;
 
 if (process.env.NODE_ENV === "production") {
   mongoURI = process.env.DB_URL;

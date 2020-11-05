@@ -15,11 +15,11 @@ app.use(express.json());
 app.set("json spaces", 2);
 
 //GET ROOT thanks: https://www.digitalocean.com/community/tutorials/use-expressjs-to-deliver-html-files
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + '/documentation.html'), (err)=> {
-    if (err) console.log(err);
-  });
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname + '/documentation.html'), (err)=> {
+//     if (err) console.log(err);
+//   });
+// });
 
 //GET Random Gundam : https://stackoverflow.com/questions/39277670/how-to-find-random-record-in-mongoose
 app.get("/random", (req, res) => {
