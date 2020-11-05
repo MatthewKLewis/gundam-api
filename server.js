@@ -14,9 +14,9 @@ app.use(express.json());
 
 app.set("json spaces", 2);
 
-// app.get('/', (req, res) => {
-//   res.redirect('')
-// })
+app.get('/', (req, res) => {
+  res.redirect('/documentation')
+})
 
 //GET DOCUMENTS thanks: https://www.digitalocean.com/community/tutorials/use-expressjs-to-deliver-html-files
 app.get("/documentation", (req, res) => {
