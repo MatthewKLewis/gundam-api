@@ -1,8 +1,4 @@
-# Gundam Mobile Suit APi
+# Gundam Mobile Suit API
 
-Routes:
-- Random Gundam
-- Gundam by ID
-- Post
-- Put
-- Delete
+### Documentation:
+https://gundamapi.herokuapp.com/
